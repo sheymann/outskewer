@@ -1,6 +1,11 @@
 *Outskewer* is a method to detect multiple outliers in data sets of numbers and in time series.
 
-*Outskewer* uses a novel approach based on the notion of skewness (a measure of the distribution symmetry) and its evolution when extremal values are removed one by one. It is easy to interpret because values are classified as outliers, potential outliers or not outliers. The class of all values is unknown when the notion of outlier is not relevant in the considered data set. Our method is also easy to use because it requires no prior knowledge on the data, and the only parameter is the size of the time window for time series. Moreover, it may be used on-line.
+*Outskewer* uses a novel approach based on the notion of skewness (a measure of the distribution symmetry) and its evolution when extremal values are removed one by one. It is easy to interpret because values are classified as outliers, potential outliers or not outliers. The class of all values is unknown when the notion of outlier is not relevant in the considered data set. 
+
+###Features
+* Easy to use because it requires no prior knowledge on the data,
+* the only parameter is the size of the time window for time series,
+* it may be used on-line.
 
 ###Research paper
 S. Heymann, M. Latapy, and C. Magnien. "Outskewer: Using Skewness to Spot Outliers in Samples and Time Series", submitted to ASONAM'12.
