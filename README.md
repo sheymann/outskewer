@@ -7,7 +7,7 @@
 * the only parameter is the size of the time window for time series,
 * it may be used on-line.
 
-###Research paper
+###Reference
 S. Heymann, M. Latapy, and C. Magnien. "Outskewer: Using Skewness to Spot Outliers in Samples and Time Series", submitted to ASONAM'12.
 
 ###Implementations
