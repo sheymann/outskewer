@@ -11,10 +11,63 @@
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+	
+	<style type="text/css" media="screen">
+		.IS_control{
+			background: #EEE -webkit-gradient(linear, 0 0, 0 65%, from(#B8B8B8), to(#EEE)) no-repeat;
+			background: #EEE -webkit-linear-gradient(top, #B8B8B8, rgba(238, 238, 238, 0.35)) no-repeat;
+			background: #EEE    -moz-linear-gradient(top, #B8B8B8, rgba(238, 238, 238, 0.35)) no-repeat;
+			background: #EEE     -ms-linear-gradient(top, #B8B8B8, rgba(238, 238, 238, 0.35)) no-repeat;
+			background: #EEE      -o-linear-gradient(top, #B8B8B8, rgba(238, 238, 238, 0.35)) no-repeat;
+			background: #EEE         linear-gradient(top, #B8B8B8, rgba(238, 238, 238, 0.35)) no-repeat;
+			border-radius: 5px;
+		}
+
+		.IS_control .IS_button{
+			-webkit-box-shadow: #777 0px 2px 3px; /* Saf3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+			   -moz-box-shadow: #777 0px 2px 3px; /* FF3.5 - 3.6 */
+			        box-shadow: #777 0px 2px 3px; /* Opera 10.5, IE9, FF4+, Chrome 6+, iOS 5 */
+			-webkit-box-sizing: border-box; /* <=iOS4, <= Android  2.3 */
+			   -moz-box-sizing: border-box; /* FF1+ */
+			        box-sizing: border-box; /* Chrome, IE8, Opera, Safari 5.1*/
+			border-radius: 20px;
+			background: #EEE -webkit-gradient(linear, 0 0, 0 50%, from(#BFBFBF), to(#EEE)) no-repeat;    /* Saf4+, Chrome */
+			background: #EEE -webkit-linear-gradient(top, #BFBFBF, rgba(238, 238, 238, 0.50)) no-repeat; /* Chrome 10+, Saf5.1+, iOS 5+ */
+			background: #EEE    -moz-linear-gradient(top, #BFBFBF, rgba(238, 238, 238, 0.50)) no-repeat; /* FF3.6 */
+			background: #EEE     -ms-linear-gradient(top, #BFBFBF, rgba(238, 238, 238, 0.50)) no-repeat; /* IE10 */
+			background: #EEE      -o-linear-gradient(top, #BFBFBF, rgba(238, 238, 238, 0.50)) no-repeat; /* Opera 11.10+ */
+			background: #EEE         linear-gradient(to bottom, #BFBFBF, rgba(238, 238, 238, 0.50)) no-repeat;
+		}
+	</style>
   </head>
   <body>
     <div class="wrapper">
-      <header>
+		<div id="theImageSwipe"></div>
+		<script type="text/javascript" src="js/min/jquery-1.5.1.min.js" charset="utf-8"></script>
+		<script type="text/javascript" src="js/min/jquery-ui-1.8.11.custom.min.js" charset="utf-8"></script>
+		<script type="text/javascript" src="js/min/jquery.ui.touch.min.js" charset="utf-8"></script>
+		<script type="text/javascript" src="js/min/jquery.ui.ipad.altfix.min.js" charset="utf-8"></script>
+		<script type="text/javascript" src="js/min/imageswipe.min.js" charset="utf-8"></script>
+		<script type="text/javascript">
+			swipeThis(
+				'theImageSwipe', // div #id that will render
+				860, // width of the images
+				100, // height of the images
+				'images/header-before.png', // the image of 'before'
+				'images/header-after.png' // the image of 'after'
+			);
+		</script>
+	
+	<!--div class="swipe view" style="display:none;">
+        <div class="swipe-frame">
+            <span class="deleted-frame"><img class='deleted asset' src="images/header1.png" /></span>
+            <span class="swipe-shell"><span class="added-frame"><img class='added asset' src="images/header1.png" /></span></span>
+            <span class="swipe-bar"><span class="top-handle"></span><span class="bottom-handle"></span></span>
+        </div>
+    </div-->
+	
+      <!--div id="headerimg"><img src="images/header1.png" width="860px" height="100px" alt="header-img" title="Example" /></div-->
+	  <header>
         <h1>Outskewer</h1>
         <p>Outskewer: Using Skewness to Spot Outliers in Samples and Time Series</p>
         <!--p class="view"><a href="https://github.com/sheymann/outskewer">View the Project on GitHub <small>sheymann/outskewer</small></a></p>
@@ -25,7 +78,7 @@
         </ul-->
       </header>
       <section>
-        <p><em>Outskewer</em> is a method to detect multiple outliers in data sets of numbers and in time series.</p>
+        <p><em>Outskewer</em> is a method to detect outliers automatically in data sets of numbers and in time series.</p>
 
 <p><em>Outskewer</em> uses a novel approach based on the notion of skewness (a measure of the distribution symmetry) and its evolution when extremal values are removed one by one. It is easy to interpret because values are classified as outliers, potential outliers or not outliers. The class of all values is unknown when the notion of outlier is not relevant in the considered data set. </p>
 
@@ -56,7 +109,7 @@
         <!--p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p-->
       </footer>
     </div>
-    <script src="javascripts/scale.fix.js"></script>
+    <script src="js/scale.fix.js"></script>
     
   </body>
 </html>

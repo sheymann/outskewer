@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:300italic,700italic,300,700);
 
 body {
-  padding:50px;
+  padding:0 50px 50px 50px;
   font:14px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
   color:#444;
   font-weight:300;
@@ -91,8 +91,19 @@ th {
   color:#444;
 }
 
-img {
+/*img {
   max-width:100%;
+}*/
+
+#headerimg {
+	border-bottom-style: dotted;
+	border-bottom-width:1px;
+	margin-bottom:50px;
+	height: 100px;
+}
+
+#theImageSwipe {
+	height: 150px !important;
 }
 
 header {
